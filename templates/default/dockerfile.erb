@@ -1,0 +1,7 @@
+# Configure dockerfile.erb according to your need.
+
+FROM <%= @image %>
+MAINTAINER <%= @maintainer %> <%%= @email %>
+<% for @cmd in @build_cmd %>
+  RUN <%= @cmd %>
+<% end %>
