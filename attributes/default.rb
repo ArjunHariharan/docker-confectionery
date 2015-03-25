@@ -1,17 +1,17 @@
-default['docker']['creds']['databag']   = 'credentials'
-default['docker']['user']               = 'arjun'
+default['docker']['creds']['databag']           = 'credentials'
+default['docker']['user']                       = 'arjun'
 
 # Default directory to store Dockerfile.
-default['docker']['directory']          = '/var/docker'
+default['docker']['directory']                  = '/tmp/docker'
 
 # Default docker base image.
-default['docker']['base']['image']      = 'ubunbu'
+default['docker']['base']['image']['name']      = 'ubunbu'
 
 # Default docker image name.
-default['docker']['image']              = 'ubuntu_demo'
+default['docker']['image']['name']              = 'ubuntu_demo'
 
 # Default docker image tag.
-default['docker']['image']['tag']       = 'v1'
+default['docker']['image']['tag']               = 'v1'
 
 # Default array of commands to build docker image.
-default['docker']['build']['commands']  = ['mkdir /var/lib/temp']
+default['docker']['build']['commands']          = ['mkdir /var/lib/myapp']

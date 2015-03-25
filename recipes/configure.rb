@@ -17,7 +17,7 @@ include_recipe 'chef-client'
 
 # docker login
 secret = Chef::EncryptedDataBagItem.load_secret
-@docker_cred = Chef::EncryptedDataBagItem.load(
+docker_cred = Chef::EncryptedDataBagItem.load(
   node['docker']['creds']['databag'],
   node['docker']['user'],
   secret
