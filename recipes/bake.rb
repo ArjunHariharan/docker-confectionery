@@ -11,7 +11,8 @@ template "#{node['docker']['directory']}/Dockerfile" do
   variables image: node['docker']['base']['image']['name'],
             maintainer: @docker_cred['maintainer'],
             email: docker_cred['email'],
-            build_cmd: node['docker']['build']['commands']
+            build_cmd: node['docker']['build']['commands'],
+            entry_point: node['docker']['build']['entry_point']
 
   action :create
 end

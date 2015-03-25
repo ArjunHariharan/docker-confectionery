@@ -5,3 +5,7 @@ MAINTAINER <%= @maintainer %> <<%= @email %>>
 <% for @cmd in @build_cmd %>
   RUN <%= @cmd %>
 <% end %>
+
+<% if @entry_point %>
+ENTRYPOINT <%= @entry_point %>
+<% end %>

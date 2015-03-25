@@ -15,3 +15,6 @@ default['docker']['image']['tag']               = 'v1'
 
 # Default array of commands to build docker image.
 default['docker']['build']['commands']          = ['mkdir /var/lib/myapp']
+
+# Default entry point
+default['docker']['build']['entry_point']       = ''
